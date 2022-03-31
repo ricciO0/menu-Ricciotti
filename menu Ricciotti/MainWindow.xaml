@@ -1,0 +1,95 @@
+﻿<Window x:Class="menu_Ricciotti.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModel="clr-namespace:menu_Ricciotti.ClassiFinestre.ViewModel"
+        xmlns:local="clr-namespace:menu_Ricciotti"
+        Height="600" Width="920"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background= "Transparent"
+        AllowsTransparency= "True">
+
+    <Window.DataContext>
+        <viewModel:CurrPage/>
+    </Window.DataContext>
+   
+          
+        <Border Background="#272537" CornerRadius="20">
+
+            <Grid>
+               <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+               </Grid.ColumnDefinitions>
+               <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition/>
+               </Grid.RowDefinitions>
+
+            <Image Name="img" >
+                <Image.Clip>
+                    <EllipseGeometry Center="65,50" RadiusX="30" RadiusY="30" />
+                </Image.Clip>
+            </Image>
+
+
+            <StackPanel Grid.Row="1">
+
+                <RadioButton Content="Home"
+                 Height="50"
+                 Foreground="White"
+                 FontSize="14"
+                 Style="{StaticResource MenuBottoni}"
+                 IsChecked="True"
+                 Command="{Binding HomeView}"/>
+
+                <RadioButton Content="PANE"
+                 Height="50"
+                 Foreground="White"
+                 FontSize="14"
+                 Style="{StaticResource MenuBottoni}"
+                 Command="{Binding PaneView}"/>
+                
+                <RadioButton Content="HAMBURGER"
+                 Height="50"
+                 Foreground="White"
+                 FontSize="14"
+                 Style="{StaticResource MenuBottoni}"
+                Command="{Binding HamburgerView}"/>
+
+                <RadioButton Content="FORMAGGIO"
+                 Height="50"
+                 Foreground="White"
+                 FontSize="14"
+                 Style="{StaticResource MenuBottoni}"
+                 Command="{Binding FormaggioView}"/>
+
+                <RadioButton Content="SALSA"
+                 Height="50"
+                 Foreground="White"
+                 FontSize="14"
+                 Style="{StaticResource MenuBottoni}"
+                 Command="{Binding SalsaView}"/>
+
+            </StackPanel>
+                
+                
+            <ContentControl Grid.Row="1"
+                                Grid.Column="1"
+                                Margin="10"
+                                Content="{Binding CurrentView}"/>
+
+            
+        </Grid>
+        
+
+
+
+    </Border>
+    
+
+
+</Window>

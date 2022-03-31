@@ -1,0 +1,48 @@
+﻿<Application x:Class="menu_Ricciotti.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewModel="clr-namespace:menu_Ricciotti.ClassiFinestre.ViewModel"
+             xmlns:view="clr-namespace:menu_Ricciotti.ClassiFinestre.View"
+             xmlns:local="clr-namespace:menu_Ricciotti"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/MenuBottoni.xaml"/>
+                <ResourceDictionary Source="Themes/Scelte.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType = "{x:Type viewModel:MainPage}">
+
+                <view:HomePage/>
+                
+            </DataTemplate>
+
+            <DataTemplate DataType = "{x:Type viewModel:PanePage}">
+
+                <view:Pane/>
+
+            </DataTemplate>
+
+            <DataTemplate DataType = "{x:Type viewModel:HamburgerPage}">
+
+                <view:Hamburger/>
+
+            </DataTemplate>
+
+            <DataTemplate DataType = "{x:Type viewModel:FormaggioPage}">
+
+                <view:Formaggio/>
+
+            </DataTemplate>
+
+            <DataTemplate DataType = "{x:Type viewModel:SalsaPage}">
+
+                <view:Salsa/>
+
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
