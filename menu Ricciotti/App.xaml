@@ -43,6 +43,12 @@
 
             </DataTemplate>
 
+            <DataTemplate DataType = "{x:Type viewModel:ContoPage}">
+
+                <view:Conto/>
+
+            </DataTemplate>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -15,19 +15,19 @@
     <Window.DataContext>
         <viewModel:CurrPage/>
     </Window.DataContext>
-   
-          
-        <Border Background="#272537" CornerRadius="20">
 
-            <Grid>
-               <Grid.ColumnDefinitions>
+
+    <Border Background="#272537" CornerRadius="20">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition/>
-               </Grid.ColumnDefinitions>
-               <Grid.RowDefinitions>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
                 <RowDefinition Height="100"/>
                 <RowDefinition/>
-               </Grid.RowDefinitions>
+            </Grid.RowDefinitions>
 
             <Image Name="img" >
                 <Image.Clip>
@@ -39,6 +39,7 @@
             <StackPanel Grid.Row="1">
 
                 <RadioButton Content="Home"
+                             Name="Home"
                  Height="50"
                  Foreground="White"
                  FontSize="14"
@@ -47,13 +48,15 @@
                  Command="{Binding HomeView}"/>
 
                 <RadioButton Content="PANE"
+                             Name="Pane"
                  Height="50"
                  Foreground="White"
                  FontSize="14"
                  Style="{StaticResource MenuBottoni}"
                  Command="{Binding PaneView}"/>
-                
+
                 <RadioButton Content="HAMBURGER"
+                             Name="Hamburger"
                  Height="50"
                  Foreground="White"
                  FontSize="14"
@@ -61,6 +64,7 @@
                 Command="{Binding HamburgerView}"/>
 
                 <RadioButton Content="FORMAGGIO"
+                             Name="Formaggio"
                  Height="50"
                  Foreground="White"
                  FontSize="14"
@@ -68,28 +72,70 @@
                  Command="{Binding FormaggioView}"/>
 
                 <RadioButton Content="SALSA"
+                             Name="Salsa"
                  Height="50"
                  Foreground="White"
                  FontSize="14"
                  Style="{StaticResource MenuBottoni}"
                  Command="{Binding SalsaView}"/>
 
+
             </StackPanel>
-                
-                
+
+            <RadioButton  Grid.Row="1" Content="CONTO"
+                          Name="Conto"
+                 Height="50"
+                 Background="White"
+                 Foreground="Black"
+                 FontSize="14"
+                 Style="{StaticResource MenuBottoni}"
+                 Command="{Binding ContoView}" Margin="0,440,0,10" Checked="RadioButton_Checked" Click="Conto_Click"/>
+            
             <ContentControl Grid.Row="1"
                                 Grid.Column="1"
                                 Margin="10"
                                 Content="{Binding CurrentView}"/>
 
-            
-        </Grid>
+            <TextBox Width="610"
+               Text="Riccio-Burger"
+               VerticalContentAlignment="Center"
+               HorizontalAlignment="Center"
+               Margin="0,0,0,2"
+               Grid.Column="1"
+               Style="{StaticResource NewTextbox}" FontFamily="Dungeon"      />
+
+
+                
+                <Button Width="40" 
+                        Height="40"
+                        Content="X"
+                        Grid.Column="1"
+                        FontWeight="Medium"
+                        VerticalContentAlignment="Top"
+                        FontSize="25"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Right" Margin="0,0,0,40" Click="Button_Click" 
+                          >
+                          <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Ellipse Fill="White"/>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                            </ControlTemplate>  
+                         </Button.Template>
+
+            </Button>
+               
         
+
+        </Grid>
+
 
 
 
     </Border>
-    
+
 
 
 </Window>

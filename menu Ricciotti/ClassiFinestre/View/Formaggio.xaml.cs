@@ -23,6 +23,43 @@ namespace menu_Ricciotti.ClassiFinestre.View
         public Formaggio()
         {
             InitializeComponent();
+
+            int a = MainWindow.a4;
+            switch (a)
+            {
+                case 1:
+                    tipo1.IsChecked = true;
+                    break;
+                case 2:
+                    tipo2.IsChecked = true;
+                    break;
+                case 3:
+                    tipo3.IsChecked = true;
+                    break;
+                case 4:
+                    tipo4.IsChecked = true;
+                    break;
+            }
+        }
+
+        private void tipo1_Checked(object sender, RoutedEventArgs e)
+        {
+            MainWindow.a4 = 1;
+        }
+
+        private void tipo2_Checked(object sender, RoutedEventArgs e)
+        {
+            MainWindow.a4 = 2;
+        }
+
+        private void tipo3_Checked(object sender, RoutedEventArgs e)
+        {
+            MainWindow.a4 = 3;
+        }
+
+        private void tipo4_Checked(object sender, RoutedEventArgs e)
+        {
+            MainWindow.a4 = 4;
         }
     }
 }

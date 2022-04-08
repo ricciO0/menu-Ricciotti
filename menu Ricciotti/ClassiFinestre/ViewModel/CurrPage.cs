@@ -18,6 +18,8 @@ namespace menu_Ricciotti.ClassiFinestre.ViewModel
 
         public Comando SalsaView { get; set; }
 
+        public Comando ContoView { get; set; }    
+
         public MainPage Home { get; set; }
 
         public PanePage Pane { get; set; }
@@ -27,6 +29,8 @@ namespace menu_Ricciotti.ClassiFinestre.ViewModel
         public FormaggioPage Formaggio { get; set; }
 
         public SalsaPage Salsa { get; set; }    
+
+        public ContoPage Conto { get; set; }
 
         private object _currentView;
 
@@ -46,6 +50,7 @@ namespace menu_Ricciotti.ClassiFinestre.ViewModel
             Hamburger= new HamburgerPage();
             Formaggio= new FormaggioPage();
             Salsa= new SalsaPage();
+            Conto=new ContoPage();
 
             CurrentView = Home;
 
@@ -54,6 +59,7 @@ namespace menu_Ricciotti.ClassiFinestre.ViewModel
             HamburgerView=new Comando(o => { CurrentView = Hamburger;});
             FormaggioView = new Comando(o => { CurrentView = Formaggio; });
             SalsaView = new Comando(o => { CurrentView = Salsa; });
+            ContoView=new Comando(o=> { CurrentView = Conto; });
 
 
         }

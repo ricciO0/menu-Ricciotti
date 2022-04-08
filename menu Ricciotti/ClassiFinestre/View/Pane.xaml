@@ -8,11 +8,16 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
 
-        <TextBlock Text="SCEGLI  IL  TIPO  DI  PANE" HorizontalAlignment="Center" Foreground="Tan" Margin="0,40,0,358" FontSize="30" FontFamily="Dungeon" FontWeight="Normal"/>
-        <RadioButton Name="tipo1" Foreground="White" Content="CIABATTA" Style="{StaticResource Scelte}" Margin="186,97,418,268" />
-        <RadioButton Name="tipo2" Foreground="White" Content="DI SEGALE" Style="{StaticResource Scelte}" Margin="418,97,186,268" />
-        <RadioButton Name="tipo3" Foreground="White" Content="TURCO" Style="{StaticResource Scelte}" Margin="186,225,418,140" />
-        <RadioButton Name="tipo4" Foreground="White" Content="CLASSIC" Style="{StaticResource Scelte}" Margin="418,225,186,140" />
+        <TextBox Text="SCEGLI  IL  TIPO  DI  PANE" HorizontalAlignment="Center" Style="{StaticResource OldTextBox}" Background="Tan" Margin="0,40,0,358"  FontFamily="Dungeon" FontWeight="Normal"/>
+        <Grid Margin="186,145,186,92">
+
+            <RadioButton x:Name="tipo1" Foreground="White" Content="CIABATTA" Style="{StaticResource Scelte}" Margin="0,0,232,128" Checked="tipo1_Checked" />
+            <RadioButton x:Name="tipo2" Foreground="White" Content="DI SEGALE" Style="{StaticResource Scelte}" Margin="232,0,0,128" Checked="tipo2_Checked" />
+            <RadioButton x:Name="tipo3" Foreground="White" Content="TURCO" Style="{StaticResource Scelte}" Margin="0,128,232,0" Checked="tipo3_Checked" />
+            <RadioButton x:Name="tipo4" Foreground="White" Content="CLASSIC" Style="{StaticResource Scelte}" Margin="232,128,0,0" Checked="tipo4_Checked" />
+
+
+        </Grid>
 
 
     </Grid>

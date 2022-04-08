@@ -31,11 +31,68 @@ namespace menu_Ricciotti
             bitmap.EndInit();
 
             img.Source = bitmap;
+            
         }
 
-        public int a1 = 0;
-        int a2 = 0;
-        int a3 = 0;
-        int a4 = 0;
+        public static int a1 = 0;
+        public static int a2 = 0;
+        public static int a3 = 0;
+        public static int a4 = 0;
+        public static int a5 = 0;
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            if (Home.IsChecked == true)
+            {
+                Home.IsChecked = false;
+            }
+            else if(Pane.IsChecked == true)
+            {
+                Pane.IsChecked = false;
+
+            }
+            else if(Hamburger.IsChecked == true)
+            {
+                Hamburger.IsChecked = false;
+            }
+            else if(Formaggio.IsChecked == true)
+            {
+                Formaggio.IsChecked = false;
+            }
+            else if(Salsa.IsChecked == true)
+            {
+                Salsa.IsChecked = false;
+            }
+        }
+
+        private void Conto_Click(object sender, RoutedEventArgs e)
+        {
+            if (Home.IsChecked == true)
+            {
+                Home.IsChecked = false;
+            }
+            else if (Pane.IsChecked == true)
+            {
+                Pane.IsChecked = false;
+
+            }
+            else if (Hamburger.IsChecked == true)
+            {
+                Hamburger.IsChecked = false;
+            }
+            else if (Formaggio.IsChecked == true)
+            {
+                Formaggio.IsChecked = false;
+            }
+            else if (Salsa.IsChecked == true)
+            {
+                Salsa.IsChecked = false;
+            }
+        }
     }
 }

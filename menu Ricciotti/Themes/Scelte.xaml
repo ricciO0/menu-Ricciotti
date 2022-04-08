@@ -27,9 +27,136 @@
 
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="True">
-                <Setter Property="Background" Value="#228b22"/>
+                <Setter Property="Background" Value="#000"/>
+                <!--228b22 verde se vuoi-->
             </Trigger>
         </Style.Triggers>
 
     </Style>
+
+    <Style TargetType="{x:Type TextBox}"
+       x:Key="NewTextbox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border CornerRadius="10"
+                         Background="#FFFF"
+                         Width="600" Height="80">
+                        <Grid>
+                            <Rectangle StrokeThickness="1"/>
+                            <TextBox Margin="0"
+                                     FontSize="65"
+                                     FontWeight="UltraBlack"
+                              Text="{TemplateBinding Text}"
+                              BorderThickness="0"
+                              Background="Transparent"
+                              HorizontalContentAlignment="Center"
+                                
+                              VerticalContentAlignment="Center"
+                              Padding="-10"
+                              Foreground="#000"
+                              x:Name="NewText"/>
+                            
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type TextBox}"
+       x:Key="OldTextBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border CornerRadius="10"
+                         Background="{TemplateBinding Background}"
+                         Width="500" Height="40">
+                        <Grid>
+                            <Rectangle StrokeThickness="1"/>
+                            <TextBox Margin="0"
+                                     FontSize="30"
+                                     FontWeight="Normal"
+                              Text="{TemplateBinding Text}"
+                              BorderThickness="0"
+                              Background="Transparent"
+                              HorizontalContentAlignment="Center"
+                                
+                              VerticalContentAlignment="Center"
+                              Padding="-10"
+                              Foreground="#000"
+                              x:Name="OldText"/>
+
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type TextBox}"
+       x:Key="ContoBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border CornerRadius="10"
+                         Background="{TemplateBinding Background}"
+                         Width="250" Height="30">
+                        <Grid>
+                            <Rectangle StrokeThickness="1"/>
+                            <TextBox Margin="0"
+                                     FontSize="20"
+                                     FontWeight="Normal"
+                              Text="{TemplateBinding Text}"
+                              BorderThickness="0"
+                              Background="Transparent"
+                              HorizontalContentAlignment="Center"
+                                
+                              VerticalContentAlignment="Center"
+                              Padding="-10"
+                              Foreground="{TemplateBinding Foreground}"
+                              x:Name="ContoBox"/>
+
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Margin" Value="0,0,0,20"/>
+
+    </Style>
+    <Style TargetType="{x:Type TextBox}"
+       x:Key="Totale">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border CornerRadius="10"
+                         Background="{TemplateBinding Background}"
+                         Width="220" Height="200">
+                        <Grid>
+                            <Rectangle StrokeThickness="0"/>
+                            <TextBox Margin="0"
+                                     FontSize="20"
+                                     FontFamily="Dungeon"
+                                     FontWeight="Normal"
+                              Text="{TemplateBinding Text}"
+                              BorderThickness="0"
+                              Background="Transparent"
+                              HorizontalContentAlignment="Center"
+                                
+                              VerticalContentAlignment="Center"
+                              Padding="0"
+                              Foreground="{TemplateBinding Foreground}"
+                              x:Name="Totale"/>
+
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Margin" Value="0,0,0,13"/>
+    </Style>
+
+
+
 </ResourceDictionary>
